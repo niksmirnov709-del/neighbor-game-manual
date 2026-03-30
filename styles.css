@@ -112,7 +112,8 @@ button {
   flex-wrap: wrap;
 }
 
-button {
+button,
+.button-link {
   border: none;
   border-radius: 999px;
   padding: 14px 18px;
@@ -124,19 +125,26 @@ button {
     opacity 140ms ease;
   background: var(--primary);
   color: #fff8f2;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
-button:hover {
+button:hover,
+.button-link:hover {
   transform: translateY(-1px);
   background: var(--primary-dark);
 }
 
-button.ghost {
+button.ghost,
+.button-link.ghost {
   background: #ebe2d2;
   color: var(--secondary);
 }
 
-button.ghost:hover {
+button.ghost:hover,
+.button-link.ghost:hover {
   background: #ddd0b8;
 }
 

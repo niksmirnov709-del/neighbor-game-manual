@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bloc de Texto</title>
+    <title>The Neighbors Manual</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -12,8 +12,8 @@
         <p class="eyebrow">App de escritura</p>
         <h1>The neighbors manual</h1>
         <p class="subtitle">
-          Usa este bloc para notas, ideas, borradores, letras, tareas o lo que
-          quieras. Tu texto se guarda automaticamente en este navegador.
+          El manual base ya viene cargado y puedes editarlo libremente. Tus
+          cambios se guardan automaticamente en este navegador.
         </p>
       </section>
 
@@ -21,12 +21,24 @@
         <div class="toolbar">
           <label class="file-name">
             <span>Nombre del archivo</span>
-            <input id="fileName" type="text" value="mi-texto" maxlength="60" />
+            <input
+              id="fileName"
+              type="text"
+              value="The Neighbors Manual 1.0 alpha"
+              maxlength="60"
+            />
           </label>
 
           <div class="actions">
+            <button id="restoreButton" type="button">Restaurar manual</button>
             <button id="copyButton" type="button">Copiar</button>
             <button id="downloadButton" type="button">Descargar .txt</button>
+            <a
+              class="button-link ghost"
+              href="./The%20Neighbors%20Manual%201.0%20alpha.odt"
+              download
+              >Descargar .odt</a
+            >
             <button id="clearButton" type="button" class="ghost">Limpiar</button>
           </div>
         </div>
@@ -35,7 +47,7 @@
           <span class="editor-label">Tu texto</span>
           <textarea
             id="textInput"
-            placeholder="Escribe aqui cualquier texto..."
+            placeholder="El manual aparecera aqui..."
             spellcheck="true"
           ></textarea>
         </label>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bloc de Texto</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">App de escritura</p>
+        <h1>The neighbors manual</h1>
+        <p class="subtitle">
+          Usa este bloc para notas, ideas, borradores, letras, tareas o lo que
+          quieras. Tu texto se guarda automaticamente en este navegador.
+        </p>
+      </section>
+
+      <section class="editor-card">
+        <div class="toolbar">
+          <label class="file-name">
+            <span>Nombre del archivo</span>
+            <input id="fileName" type="text" value="mi-texto" maxlength="60" />
+          </label>
+
+          <div class="actions">
+            <button id="copyButton" type="button">Copiar</button>
+            <button id="downloadButton" type="button">Descargar .txt</button>
+            <button id="clearButton" type="button" class="ghost">Limpiar</button>
+          </div>
+        </div>
+
+        <label class="editor-wrap" for="textInput">
+          <span class="editor-label">Tu texto</span>
+          <textarea
+            id="textInput"
+            placeholder="Escribe aqui cualquier texto..."
+            spellcheck="true"
+          ></textarea>
+        </label>
+
+        <div class="status-bar">
+          <div class="stats">
+            <span id="charCount">0 caracteres</span>
+            <span id="wordCount">0 palabras</span>
+            <span id="lineCount">1 linea</span>
+          </div>
+          <p id="saveStatus" class="save-status">Listo</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
